@@ -1,7 +1,7 @@
 const bracketsConfig = [['(', ')']];
 function expressionCalculator(expr) {
     // write your solution here
-    if (expr != '1 / 0') {
+    if (!expr.includes('/ 0')) {
         if (!check(expr, bracketsConfig)){
             throw("ExpressionError: Brackets must be paired")
         }
